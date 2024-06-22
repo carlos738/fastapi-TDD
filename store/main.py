@@ -1,9 +1,10 @@
 from fastapi import FastAPI
-#from store.core.config import settings
-#from store.routers import api_router
+# from store.core.config import settings
+# from store.routers import api_router
+
 
 class App(FastAPI):
-    def __init__(self, *args,**kwargs) -> None:
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(
             *args,
             **kwargs,
@@ -11,5 +12,7 @@ class App(FastAPI):
             title=settings.PROJECT_NAME,
             root_path=settings.ROOT_PATH
         )
+
+
 app = App()
-#app.include_router(api_router)        
+# app.include_router(api_router)
