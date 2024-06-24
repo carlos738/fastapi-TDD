@@ -1,6 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient
-
 from store.core.config import settings
+
 
 
 class MongoClient:
@@ -9,6 +9,5 @@ class MongoClient:
 
     def get(self) -> AsyncIOMotorClient:
         return self.client
-
 
 db_client = MongoClient()
