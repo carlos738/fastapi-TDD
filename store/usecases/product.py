@@ -10,6 +10,7 @@ from store.core.exceptions import NotFoundException
 
 class ProductUsecase:
     def __init__(self) -> None:
+        #breakpoint()
         self.client: AsyncIOMotorClient = db_client.get()
         self.database: AsyncIOMotorDatabase = self.client.get_database()
         self.collection = self.database.get_collection("products")
